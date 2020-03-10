@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html>
-<body>
-
-<h2>What Can JavaScript Do?</h2>
-
-<p>JavaScript can change HTML attribute values.</p>
-
-<p>In this case JavaScript changes the value of the src (source) attribute of an image.</p>
-
-<button onclick="document.getElementById('myImage').src='./images/mechanical.gif'">The Twins</button>
-
-<img id="myImage" src="./images/non-mechanical.gif" style="width:80px">
-
-<button onclick="document.getElementById('myImage').src='./images/non-mechanical.gif'">Eye of Cthulhu</button>
-<button onclick="getElementById('demo').innerHTML = Date()">text button</button>
-
-</body>
+  <link rel="stylesheet" href="default.css">
+  <script src="./js/script.js"></script>
+  <body>
+    <button onclick="document.getElementById('myimage').src='./images/mechanical.gif'">The Twins</button>
+    <img id="myimage" src="./images/non-mechanical.gif">
+    <button onclick="document.getElementById('myimage').src='./images/non-mechanical.gif'">Eye of Cthulhu</button>
+    <button onclick="getElementById('demo3').innerHTML=Date()">Click me to check time</button>
+    <p id="demo3"></p>
+    <p id="demo" onclick="myFunction()">Click me to change text color.</p>
+    <p id="demo2" onclick="myFunction2()">Click me to change background text color.</p>
+    <p id="demo4" onclick="myFunction4()">Click me to change background its color to blue.</p>
+<script>
+function myFunction() {
+  document.getElementById("demo").style.color="red";
+}
+function myFunction2() {
+  document.getElementById("demo2").style.backgroundColor="green"
+}
+function myFunction4() {
+  document.getElementsByTagName("BODY")[0].style.backgroundColor = "blue";
+}
+</script>
+  </body>
 </html>
